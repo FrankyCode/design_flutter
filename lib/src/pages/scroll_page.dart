@@ -7,24 +7,24 @@ class ScrollPage extends StatelessWidget {
       body: PageView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          _paginaUno(),
-          _paginaDos(),
+          _pageOne(),
+          _pageTwo(),
         ],
       ),
     );
   }
 
-  Widget _paginaUno() {
+  Widget _pageOne() {
     return Stack(
       children: <Widget>[
-        _colorFondo(),
-        _imagenFondo(),
-        _textos(),
+        _backgroundColor(),
+        _backgroundImage(),
+        _texts(),
       ],
     );
   }
 
-  Widget _colorFondo() {
+  Widget _backgroundColor() {
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -32,7 +32,7 @@ class ScrollPage extends StatelessWidget {
     );
   }
 
-  Widget _imagenFondo() {
+  Widget _backgroundImage() {
     return Container(
         width: double.infinity,
         height: double.infinity,
@@ -42,18 +42,18 @@ class ScrollPage extends StatelessWidget {
         ));
   }
 
-  Widget _textos() {
-    final estiloTexto = TextStyle(color: Colors.white, fontSize: 50.0);
+  Widget _texts() {
+    final textStyle = TextStyle(color: Colors.white, fontSize: 50.0);
     return SafeArea(
       child: Column(
         children: <Widget>[
           Text(
             '11º',
-            style: estiloTexto,
+            style: textStyle,
           ),
           Text(
             'Miercoles',
-            style: estiloTexto,
+            style: textStyle,
           ),
           Expanded(
             child: Container(),
@@ -68,10 +68,10 @@ class ScrollPage extends StatelessWidget {
     );
   }
 
-  Widget _paginaDos() {
+  Widget _pageTwo() {
     return Stack(
       children: <Widget>[
-        _colorFondo(),
+        _backgroundColor(),
         _button(),
       ],
     );
@@ -85,7 +85,7 @@ class ScrollPage extends StatelessWidget {
         shape: StadiumBorder(),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-          child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0),)),
+          child: Text('Welcome', style: TextStyle(fontSize: 20.0),)),
         onPressed: (){},
       ),
     );

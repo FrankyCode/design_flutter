@@ -1,5 +1,5 @@
 import 'package:design_flutter/src/pages/basic_page.dart';
-import 'package:design_flutter/src/pages/botones_page.dart';
+import 'package:design_flutter/src/pages/buttons_page.dart';
 import 'package:design_flutter/src/pages/scroll_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
 ));
 
     return MaterialApp(
-      title: 'Diseños',
+      title: 'Design',
       debugShowCheckedModeBanner: false,
-      initialRoute: 'botones',
+      initialRoute: 'buttons',
       routes: {
         'basic'   : (BuildContext context) => BasicPage(),
         'scroll'  : (BuildContext context) => ScrollPage(),
-        'botones' :(BuildContext context )=> BotonesPage(),
+        'buttons' :(BuildContext context )=> ButtonsPage(),
       },
      
     );

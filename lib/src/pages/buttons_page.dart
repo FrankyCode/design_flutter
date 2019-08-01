@@ -1,20 +1,19 @@
 import 'dart:math';
-import 'dart:ui' as prefix0;
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class BotonesPage extends StatelessWidget {
+class ButtonsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          _fondoApp(),
+          _backgroundApp(),
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                _titulos(),
+                _title(),
                 _bottonsRounded(),
               ],
             ),
@@ -25,7 +24,7 @@ class BotonesPage extends StatelessWidget {
     );
   }
 
-  Widget _fondoApp() {
+  Widget _backgroundApp() {
     final gradient = Container(
       width: double.infinity,
       height: double.infinity,
@@ -59,7 +58,7 @@ class BotonesPage extends StatelessWidget {
     );
   }
 
-  Widget _titulos() {
+  Widget _title() {
     return SafeArea(
       child: Container(
         padding: EdgeInsets.all(20.0),

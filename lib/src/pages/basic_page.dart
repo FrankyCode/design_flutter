@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BasicPage extends StatelessWidget {
-  final styleTitulo = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
-  final styleSubTitulo = TextStyle(fontSize: 18.0, color: Colors.grey);
+  final styleTitle = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
+  final styleSubTitle = TextStyle(fontSize: 18.0, color: Colors.grey);
 
   @override
   Widget build(BuildContext context) {
@@ -10,19 +10,18 @@ class BasicPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            _crearImagen(),
-            _crearTitulo(),
-            _crearAcciones(),
-            _crearText(),
-            _crearText(),
-            _crearText(),
+            _createImage(),
+            _createTitle(),
+            _createAccions(),
+            _createText(),
+            
           ],
         ),
       ),
     );
   }
 
-  Widget _crearImagen() {
+  Widget _createImage() {
     return Image(
       height: 200.0,
       width: double.infinity,
@@ -32,7 +31,7 @@ class BasicPage extends StatelessWidget {
     );
   }
 
-  Widget _crearTitulo() {
+  Widget _createTitle() {
     return SafeArea(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
@@ -43,15 +42,15 @@ class BasicPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Titulo',
-                    style: styleTitulo,
+                    'Title',
+                    style: styleTitle,
                   ),
                   SizedBox(
                     height: 7.0,
                   ),
                   Text(
                     'SubTitulo',
-                    style: styleSubTitulo,
+                    style: styleSubTitle,
                   ),
                 ],
               ),
@@ -71,7 +70,7 @@ class BasicPage extends StatelessWidget {
     );
   }
 
-  Widget _crearAcciones() {
+  Widget _createAccions() {
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,7 +83,7 @@ class BasicPage extends StatelessWidget {
     );
   }
 
-  Widget _accion(IconData icon, String texto) {
+  Widget _accion(IconData icon, String text) {
     return Column(
       children: <Widget>[
         Icon(
@@ -96,14 +95,14 @@ class BasicPage extends StatelessWidget {
           height: 5.0,
         ),
         Text(
-          texto,
+          text,
           style: TextStyle(fontSize: 15.0, color: Colors.blue),
         ),
       ],
     );
   }
 
-  Widget _crearText() {
+  Widget _createText() {
     return SafeArea(
           child: Container(
           padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
