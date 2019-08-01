@@ -1,6 +1,8 @@
 # design_flutter
 
-This Project is for try to maked diferents designs.
+This project is created with the idea of creating designs in Flutter like the ones we can see in
+dribbble web site or uplabs
+
 - [1º Design](https://flutter.dev/docs/development/ui/layout/tutorial)
 - [2º Design](https://dribbble.com/shots/5283057-Transaction-Day-Night-Mode)
 - [3º Design]()
